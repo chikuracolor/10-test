@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML 基礎知識 10 題互動測驗">
+  <title>HTML 基礎知識測驗</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="HTML Quiz 首頁">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span>WEB STUDY</span>
+    </a>
+    <span class="header-tag">INTERACTIVE QUIZ</span>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">WEB DESIGN · BASIC KNOWLEDGE</p>
+      <h1>HTML 基礎知識測驗</h1>
+      <p class="intro-text">用 10 道選擇題，檢視你對網頁結構與 HTML 基礎語法的理解。</p>
+      <div class="intro-meta">
+        <span><strong>10</strong> 道題目</span>
+        <span><strong>單選</strong> 作答</span>
+        <span><strong>100</strong> 分滿分</span>
+      </div>
+    </section>
+
+    <section class="progress-panel" aria-label="作答進度">
+      <div class="progress-copy">
+        <span>作答進度</span>
+        <strong id="progress-text">已作答 0 / 10 題</strong>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </section>
+
+    <form id="quiz-form">
+      <div id="questions" class="questions"></div>
+      <div class="submit-area">
+        <p id="submit-hint">完成所有題目後，按下交卷查看成績與完整解析。</p>
+        <button type="submit" class="primary-button" id="submit-button">提交答案並查看結果</button>
+      </div>
+    </form>
+
+    <section id="results" class="results hidden" aria-live="polite">
+      <div class="results-heading">
+        <p class="eyebrow">YOUR RESULT</p>
+        <h2>測驗結果</h2>
+      </div>
+      <div class="score-card">
+        <div>
+          <span class="score-label">你的得分</span>
+          <p class="score-number"><span id="score">0</span><small> / 100</small></p>
+          <p id="score-message" class="score-message"></p>
+        </div>
+        <div class="score-ring" id="score-ring">
+          <span id="score-percent">0%</span>
+        </div>
+      </div>
+      <div class="result-stats">
+        <div><strong id="correct-count">0</strong><span>答對</span></div>
+        <div><strong id="wrong-count">0</strong><span>答錯</span></div>
+        <div><strong id="unanswered-count">0</strong><span>未作答</span></div>
+      </div>
+      <div class="review-heading">
+        <h3>答案與詳細解析</h3>
+        <p>逐題查看你的作答、正確答案與觀念說明。</p>
+      </div>
+      <div id="review-list" class="review-list"></div>
+      <button type="button" class="secondary-button" id="retry-button">重新測驗</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML 基礎知識測驗 · 練習用互動網頁</p>
+  </footer>
+</body>
+</html>
